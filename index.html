@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshRide — Laundry, Cleaning & Fumigation</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════ NAV ═══════════════════════ -->
+<nav>
+  <div class="logo">Fresh<span>Ride</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#pickup">Pickup options</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#">Login</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openModal()">Book Now</button>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Otukpo · Now accepting orders
+      </div>
+      <h1>Clean clothes,<br><em>delivered</em> to<br>your door</h1>
+      <p class="hero-sub">Professional laundry, home cleaning, and fumigation — picked up by our riders, processed at our hub, returned fresh to you.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openModal()">Schedule a Pickup</button>
+        <button class="btn-outline" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How it works</button>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="order-preview">
+        <div class="order-top">
+          <div class="order-title">Live Order Tracker</div>
+          <div class="status-pill">In Progress</div>
+        </div>
+        <div class="order-item">
+          <div class="order-icon blue">🧺</div>
+          <div>
+            <div class="order-label">Wash &amp; Fold — 3kg</div>
+            <div class="order-sub">Rider: Emeka O. · ETA 20 mins</div>
+          </div>
+        </div>
+        <div class="order-item">
+          <div class="order-icon mint">🏠</div>
+          <div>
+            <div class="order-label">Home Cleaning — 2 rooms</div>
+            <div class="order-sub">Scheduled: Tomorrow 9am</div>
+          </div>
+        </div>
+        <div class="tracker">
+          <div class="tracker-label">Order Status</div>
+          <div class="tracker-steps">
+            <div class="t-step"><div class="t-dot done"></div><div class="t-text">Picked up</div></div>
+            <div class="t-line done"></div>
+            <div class="t-step"><div class="t-dot done"></div><div class="t-text">At hub</div></div>
+            <div class="t-line done"></div>
+            <div class="t-step"><div class="t-dot active"></div><div class="t-text">Cleaning</div></div>
+            <div class="t-line pending"></div>
+            <div class="t-step"><div class="t-dot pending"></div><div class="t-text">Delivery</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STATS ═══════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div><div class="stat-n">4,200+</div><div class="stat-l">Orders completed</div></div>
+    <div><div class="stat-n">98%</div><div class="stat-l">Customer satisfaction</div></div>
+    <div><div class="stat-n">35+</div><div class="stat-l">Partner collection points</div></div>
+    <div><div class="stat-n">60 min</div><div class="stat-l">Average pickup time</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SERVICES ═══════════════════════ -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-tag">Our Services</div>
+    <h2 class="section-title">Everything clean,<br>under one platform</h2>
+    <p class="section-sub">Three professional services, one seamless booking experience — all dispatched by our rider network.</p>
+    <div class="services-grid">
+
+      <div class="svc-card">
+        <div class="svc-icon blue">🧺</div>
+        <div class="svc-name">Laundry</div>
+        <div class="svc-desc">Wash, dry, and fold done with care. We handle everything from everyday wear to delicate fabrics and dry cleaning.</div>
+        <ul class="svc-features">
+          <li>Wash &amp; fold (by weight)</li>
+          <li>Dry cleaning &amp; pressing</li>
+          <li>Express 24-hour service</li>
+          <li>Stain treatment included</li>
+        </ul>
+        <div class="svc-price">From ₦2,000 <span>/ kg</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon mint">🏠</div>
+        <div class="svc-name">Home Cleaning</div>
+        <div class="svc-desc">Professional cleaners for your home — scheduled at your convenience, executed to the highest standard.</div>
+        <ul class="svc-features">
+          <li>Standard &amp; deep cleaning</li>
+          <li>Kitchen &amp; bathroom specialist</li>
+          <li>Move-in / move-out service</li>
+          <li>Trained &amp; vetted cleaners</li>
+        </ul>
+        <div class="svc-price">From ₦5,000 <span>/ session</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon amber">🛡️</div>
+        <div class="svc-name">Fumigation</div>
+        <div class="svc-desc">Licensed and certified fumigation services for residential and commercial properties. Safe for your family.</div>
+        <ul class="svc-features">
+          <li>NAFDAC-licensed chemicals</li>
+          <li>Cockroach &amp; rodent control</li>
+          <li>Bed bug elimination</li>
+          <li>Post-service safety certificate</li>
+        </ul>
+        <div class="svc-price">From ₦10,000 <span>/ property</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section id="how">
+  <div class="section-inner">
+    <div class="section-tag">How it works</div>
+    <h2 class="section-title">Done in 4 simple steps</h2>
+    <p class="section-sub">Our platform handles everything — from scheduling to delivery — in under 60 seconds of your time.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">📱</div>
+        <div class="step-title">Book online</div>
+        <div class="step-desc">Choose your service, pickup type, date and time. Takes less than a minute.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">🏍️</div>
+        <div class="step-title">Rider picks up</div>
+        <div class="step-desc">Our commission-based riders collect your items from home or partner drop-off points.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">⚙️</div>
+        <div class="step-title">We get to work</div>
+        <div class="step-desc">Items are processed at our central home hub — sorted, cleaned, and quality-checked.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon">✅</div>
+        <div class="step-title">Delivered fresh</div>
+        <div class="step-desc">Your rider returns your items cleaned and packaged. Track every step live.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PICKUP OPTIONS ═══════════════════════ -->
+<section id="pickup">
+  <div class="section-inner">
+    <div class="section-tag">Pickup Options</div>
+    <h2 class="section-title">Choose how we<br>collect your items</h2>
+    <p class="section-sub">Flexible pickup designed around your lifestyle — home collection or nearby drop-off.</p>
+    <div class="pickup-grid">
+
+      <div class="pickup-card">
+        <div class="pickup-badge badge-blue">Most popular</div>
+        <div style="font-size:32px;margin-bottom:16px">🏠</div>
+        <div class="pickup-label">Home Pickup</div>
+        <div class="pickup-desc">Our rider comes directly to your door. No need to leave home — we handle the entire logistics.</div>
+        <ul class="pickup-steps">
+          <li><span>1</span> Book your pickup slot online</li>
+          <li><span>2</span> Rider arrives at your address</li>
+          <li><span>3</span> Items collected &amp; receipt sent</li>
+          <li><span>4</span> Delivered back to your door</li>
+        </ul>
+      </div>
+
+      <div class="pickup-card">
+        <div class="pickup-badge badge-mint">Partner network</div>
+        <div style="font-size:32px;margin-bottom:16px">📍</div>
+        <div class="pickup-label">Partner Drop-Off</div>
+        <div class="pickup-desc">Drop items at one of our 35+ partner collection points — shops and businesses near you.</div>
+        <ul class="pickup-steps">
+          <li><span>1</span> Find nearest partner location</li>
+          <li><span>2</span> Drop off your items &amp; tag</li>
+          <li><span>3</span> We collect from partner same day</li>
+          <li><span>4</span> Pick up or get home delivery</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ BOOKING FORM ═══════════════════════ -->
+<section id="book">
+  <div class="section-inner">
+    <div class="book-grid">
+
+      <div>
+        <div class="section-tag">Book a Service</div>
+        <div class="book-info-title">Schedule your first<br>pickup today</div>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:10px">Sign up and place your first order in under 2 minutes. Our rider will be with you within the hour.</p>
+        <div class="trust-items">
+          <div class="trust-item">
+            <div class="trust-icon">🔒</div>
+            <div>
+              <div class="trust-title">Secure &amp; private</div>
+              <div class="trust-desc">Your data is encrypted and never shared with third parties.</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">💳</div>
+            <div>
+              <div class="trust-title">Pay with Paystack</div>
+              <div class="trust-desc">Secure card, bank transfer, or USSD — Nigeria's most trusted payment gateway.</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">📍</div>
+            <div>
+              <div class="trust-title">Live order tracking</div>
+              <div class="trust-desc">Know exactly where your items are at every stage of the process.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:var(--warm);border-radius:20px;padding:36px;border:1px solid rgba(0,0,0,0.06)">
+          <div class="book-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First name</label>
+                <input type="text" placeholder="Emeka" id="fname">
+              </div>
+              <div class="form-group">
+                <label>Last name</label>
+                <input type="text" placeholder="Okafor" id="lname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email address</label>
+              <input type="email" placeholder="you@example.com" id="email">
+            </div>
+            <div class="form-group">
+              <label>Phone number</label>
+              <input type="tel" placeholder="+234 800 000 0000" id="phone">
+            </div>
+            <div class="form-group">
+              <label>Service needed</label>
+              <select id="service">
+                <option value="">Select a service...</option>
+                <option>Laundry — Wash &amp; Fold</option>
+                <option>Laundry — Dry Cleaning</option>
+                <option>Home Cleaning</option>
+                <option>Fumigation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Pickup type</label>
+              <select id="pickup-type">
+                <option>Home Pickup</option>
+                <option>Partner Drop-Off</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Pickup address</label>
+              <input type="text" placeholder="Your street address, Lagos" id="address">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Preferred date</label>
+                <input type="date" id="pdate">
+              </div>
+              <div class="form-group">
+                <label>Preferred time</label>
+                <select id="ptime">
+                  <option>8:00 AM – 10:00 AM</option>
+                  <option>10:00 AM – 12:00 PM</option>
+                  <option>12:00 PM – 2:00 PM</option>
+                  <option>2:00 PM – 4:00 PM</option>
+                  <option>4:00 PM – 6:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <button class="submit-btn" onclick="submitOrder()">Request Pickup →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ LIVE TRACKING DEMO ═══════════════════════ -->
+<section id="track">
+  <div class="section-inner" style="text-align:center">
+    <div class="section-tag" style="display:inline-block">Live Tracking</div>
+    <h2 class="section-title" style="margin:12px auto">Know exactly where<br>your order is</h2>
+    <p class="section-sub" style="margin:0 auto 50px">Real-time status updates at every stage — from pickup to delivery.</p>
+    <div class="track-demo">
+      <div class="track-id">Order #FR-20250407-8821</div>
+      <div class="track-order">Wash &amp; Fold — 4kg</div>
+      <div class="track-service">Rider: Chidi A. · Picked up at 10:22 AM</div>
+      <div class="track-timeline" style="margin-top:28px">
+
+        <div class="tl-item done">
+          <div class="tl-left done">
+            <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 5.5,10.5 12,4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="tl-body">
+            <div class="tl-title">Pickup scheduled</div>
+            <div class="tl-time">9:00 AM · Order placed &amp; confirmed</div>
+          </div>
+        </div>
+
+        <div class="tl-item done">
+          <div class="tl-left done">
+            <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 5.5,10.5 12,4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="tl-body">
+            <div class="tl-title">Rider assigned</div>
+            <div class="tl-time">9:45 AM · Chidi A. en route to your location</div>
+          </div>
+        </div>
+
+        <div class="tl-item done">
+          <div class="tl-left done">
+            <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 5.5,10.5 12,4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="tl-body">
+            <div class="tl-title">Items picked up</div>
+            <div class="tl-time">10:22 AM · Items collected &amp; in transit to hub</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left active">
+            <svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="white"/></svg>
+          </div>
+          <div class="tl-body">
+            <div class="tl-title">Cleaning in progress</div>
+            <div class="tl-time">At hub · Est. ready 2:00 PM</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left pending"></div>
+          <div class="tl-body">
+            <div class="tl-title pending-text">Out for delivery</div>
+            <div class="tl-time" style="color:rgba(255,255,255,0.2)">Estimated 3:00 PM – 4:00 PM</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left pending"></div>
+          <div class="tl-body" style="padding-bottom:0">
+            <div class="tl-title pending-text">Delivered</div>
+            <div class="tl-time" style="color:rgba(255,255,255,0.2)">Your items returned fresh</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PARTNERS ═══════════════════════ -->
+<section id="partners">
+  <div class="section-inner">
+    <div class="partner-cta">
+      <div>
+        <div class="partner-cta-title">Become a collection point partner</div>
+        <div class="partner-cta-sub">Register your business as a FreshRide collection node. Earn commission, increase foot traffic, and join our growing Lagos network.</div>
+        <button class="btn-primary" style="margin-top:24px">Register your business</button>
+      </div>
+      <div style="text-align:center;padding:20px">
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:52px;color:var(--mint)">35+</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-top:4px">Active partners</div>
+      </div>
+    </div>
+    <div class="partner-benefits">
+      <div class="pb-card">
+        <div class="pb-icon">💰</div>
+        <div class="pb-title">Earn on every drop-off</div>
+        <div class="pb-desc">Receive a commission for each order dropped at your location. Passive income with zero overhead.</div>
+      </div>
+      <div class="pb-card">
+        <div class="pb-icon">📈</div>
+        <div class="pb-title">More foot traffic</div>
+        <div class="pb-desc">Customers visiting for drop-offs are potential customers for your own business too.</div>
+      </div>
+      <div class="pb-card">
+        <div class="pb-icon">🗺️</div>
+        <div class="pb-title">Featured on our map</div>
+        <div class="pb-desc">Your location is shown to all FreshRide users as a nearby partner — free visibility.</div>
+      </div>
+      <div class="pb-card">
+        <div class="pb-icon">🤝</div>
+        <div class="pb-title">Simple onboarding</div>
+        <div class="pb-desc">Register online, receive training, and go live within 48 hours. We provide everything you need.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ REVIEWS ═══════════════════════ -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="section-tag">Customer reviews</div>
+    <h2 class="section-title">Loved across Lagos</h2>
+    <p class="section-sub" style="margin-bottom:40px">Real feedback from real customers who've made FreshRide part of their routine.</p>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"I've been using FreshRide for 3 months now. The pickup is always on time and my clothes come back perfectly folded. The tracking is a game-changer."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:var(--sky)">AO</div>
+          <div><div class="reviewer-name">Aisha Okonkwo</div><div class="reviewer-loc">Ikeja, Lagos</div></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"The home cleaning service is exceptional. Very professional team, they didn't miss a single corner. Booked them again the next week already."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:var(--mint2)">TF</div>
+          <div><div class="reviewer-name">Taiwo Fashola</div><div class="reviewer-loc">Lekki, Lagos</div></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-text">"Used the fumigation service — licensed, thorough, and safe. They gave us a certificate after. My entire building is now pest-free. Highly recommend."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#FF6B35">KA</div>
+          <div><div class="reviewer-name">Kunle Adeyemi</div><div class="reviewer-loc">Surulere, Lagos</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Fresh<span>Ride</span></div>
+      <div class="footer-tagline">Lagos's on-demand laundry, cleaning, and fumigation platform. Powered by riders. Built for you.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#">Laundry</a></li>
+        <li><a href="#">Home Cleaning</a></li>
+        <li><a href="#">Fumigation</a></li>
+        <li><a href="#">Express Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Become a rider</a></li>
+        <li><a href="#">Partner with us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <ul class="footer-links">
+        <li><a href="#">Track your order</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Terms of service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 FreshRide. All rights reserved. Lagos, Nigeria.</div>
+    <div class="footer-badges">
+      <div class="fb">Paystack secured</div>
+      <div class="fb">NAFDAC licensed</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ BOOKING MODAL ═══════════════════════ -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <div id="modal-body">
+      <div class="modal-header">
+        <div class="modal-title">Book a service</div>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="book-form">
+        <div class="form-group">
+          <label>Your name</label>
+          <input type="text" placeholder="Full name" id="m-name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" id="m-email">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+234 800 000 0000" id="m-phone">
+        </div>
+        <div class="form-group">
+          <label>Service</label>
+          <select id="m-service">
+            <option>Laundry — Wash &amp; Fold</option>
+            <option>Laundry — Dry Cleaning</option>
+            <option>Home Cleaning</option>
+            <option>Fumigation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Pickup address</label>
+          <input type="text" placeholder="Your address, Lagos" id="m-address">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="m-date">
+          </div>
+          <div class="form-group">
+            <label>Time slot</label>
+            <select id="m-time">
+              <option>8am – 10am</option>
+              <option>10am – 12pm</option>
+              <option>12pm – 2pm</option>
+              <option>2pm – 4pm</option>
+              <option>4pm – 6pm</option>
+            </select>
+          </div>
+        </div>
+        <button class="submit-btn" onclick="confirmOrder()">Confirm &amp; Book →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+  // Modal
+  function openModal() { document.getElementById('modal').classList.add('open'); }
+  function closeModal() { document.getElementById('modal').classList.remove('open'); }
+  function handleOverlayClick(e) { if (e.target === document.getElementById('modal')) closeModal(); }
+
+  // Generate order reference
+  function generateRef() {
+    const d = new Date().toISOString().slice(0,10).replace(/-/g,'');
+    return 'FR-' + d + '-' + Math.floor(1000 + Math.random() * 9000);
+  }
+
+  // Confirm booking from modal
+  function confirmOrder() {
+    const name = document.getElementById('m-name').value.trim();
+    const email = document.getElementById('m-email').value.trim();
+    const svc = document.getElementById('m-service').value;
+    if (!name || !email) {
+      alert('Please fill in your name and email to continue.');
+      return;
+    }
+    const ref = generateRef();
+    document.getElementById('modal-body').innerHTML = `
+      <div class="modal-success">
+        <div class="success-icon">✅</div>
+        <div class="success-title">Booking confirmed!</div>
+        <div class="success-sub">Thank you, <strong>${name.split(' ')[0]}</strong>! Your <strong>${svc}</strong> pickup has been scheduled. Our rider will contact you shortly.</div>
+        <div class="order-ref">${ref}</div>
+        <p style="font-size:12px;color:var(--light);margin-top:12px">Save this reference number to track your order</p>
+        <button class="submit-btn" style="margin-top:20px;background:var(--navy)" onclick="closeModal();resetModal()">Done</button>
+      </div>`;
+  }
+
+  // Pre-fill modal from page form
+  function submitOrder() {
+    const fn = document.getElementById('fname').value.trim();
+    const em = document.getElementById('email').value.trim();
+    const svc = document.getElementById('service').value;
+    if (!fn || !em || !svc) {
+      alert('Please fill in your name, email, and service type.');
+      return;
+    }
+    openModal();
+    document.getElementById('m-name').value = fn + ' ' + (document.getElementById('lname').value || '');
+    document.getElementById('m-email').value = em;
+    if (svc) document.getElementById('m-service').value = svc;
+  }
+
+  // Reset modal to form state
+  function resetModal() {
+    document.getElementById('modal-body').innerHTML = `
+      <div class="modal-header">
+        <div class="modal-title">Book a service</div>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="book-form">
+        <div class="form-group"><label>Your name</label><input type="text" placeholder="Full name" id="m-name"></div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com" id="m-email"></div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+234 800 000 0000" id="m-phone"></div>
+        <div class="form-group"><label>Service</label>
+          <select id="m-service">
+            <option>Laundry — Wash &amp; Fold</option>
+            <option>Laundry — Dry Cleaning</option>
+            <option>Home Cleaning</option>
+            <option>Fumigation</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Pickup address</label><input type="text" placeholder="Your address, Lagos" id="m-address"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label>Date</label><input type="date" id="m-date"></div>
+          <div class="form-group"><label>Time slot</label>
+            <select id="m-time">
+              <option>8am – 10am</option><option>10am – 12pm</option>
+              <option>12pm – 2pm</option><option>2pm – 4pm</option><option>4pm – 6pm</option>
+            </select>
+          </div>
+        </div>
+        <button class="submit-btn" onclick="confirmOrder()">Confirm &amp; Book →</button>
+      </div>`;
+  }
+
+  // Set min date to today
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('pdate').min = today;
+  document.getElementById('m-date').min = today;
+</script>
+
+</body>
+</html>
